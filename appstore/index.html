@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>Amazon Appstore</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/all.css"><!--FontAwesome-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fondoNegro fixed-top">
+        <a class="navbar-brand" href="#"><span><img src="img/logo.png"></span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <span class="navbar-nav mr-auto"></span>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="newbtn-secondary btn btn-secondary my-2 my-sm-0" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+            </form>
+        </div>
+        </nav>
+        
+        <main role="main" class="container">
+
+           <div class="row">
+           <div class="col-12"> 
+            <select onclick="mostrarApps()"  id="categorias" name="categorias" class=" newSelect form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              </select>
+           </div>
+           </div>
+ 
+            <div class="row fila" id="infoCategorias">
+            </div>
+           
+
+
+            <div class="row botonAgregarApp">
+                <hr>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#agregarApp">Agregar Una App</button>
+            </div>
+            
+           
+            <!-- Modal De Agregar Apps-->
+            <div class="modal fade" id="agregarApp" tabindex="-1" role="dialog" aria-labelledby="agregarApp" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1><b>Ingresando una nueva APP</b></h1>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                              <label for="formGroupExampleInput">Nombre de la App</label>
+                              <input type="text" class="form-control" id="NombreApp" placeholder="Ej. App X">
+                            </div>
+                            <div class="form-group">
+                              <label for="formGroupExampleInput2">Nombre del Desarrollador</label>
+                              <input type="text" class="form-control" id="NombreDes" placeholder="Ej. Ada Gicela Márquez">
+                            </div>
+                            <div class="form-group">
+                              <label for="formGroupExampleInput2">Descripion de la App</label>
+                              <input type="text" class="form-control" id="Descripcion" placeholder="Ej. Esta es una app que trata sobre ...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Categoria</label>
+                                <select class="form-control" id="Categoria">
+                                    <option value="categoria0">Categoria 0</option>
+                                    <option value="categoria1">Categoria 1</option>
+                                    <option value="categoria2">Categoria 2</option>
+                                    <option value="categoria3">Categoria 3</option>
+                                    <option value="categoria4">Categoria 4</option>
+                                </select>
+                              </div>
+                        </form>  
+                    </div> 
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success">Guardar App</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </main>
+              
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+
+body {
+    padding-top: 5rem;
+    font-family: 'Exo 2', sans-serif !important;   
+    background-color: rgb(231, 226, 226) !important; 
+}
+
+
+.fondoNegro{
+    background-color: black !important;
+}
+
+.newbtn-secondary{
+    background-color: orange !important;
+    color: black !important;
+}
+
+.newSelect{
+    width: 100% !important;
+    font-size: 50px !important;
+    margin-top: 10px;
+}
+
+.fila{
+    margin-top: 10px;
+}
+
+.apps{
+    width: 100%;
+    height: 290px;
+    background-color: white;
+    border: darkgoldenrod solid 1px;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.apps:hover{
+    width: 100%;
+    height: 290px;
+    background-color: orange;
+    border-top: solid orange;
+    border-bottom: solid orange;
+    border-left: solid orange;
+    border-right: solid orange;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+.imgApps{
+    width: 100%;
+} 
+
+@media only screen and (max-width: 770px) {
+    .apps{
+        width: 100%;
+        height: 370px;
+        background-color: transparent;
+        border-top: solid orange;
+        border-bottom: solid orange;
+        border-left: solid orange;
+        border-right: solid orange;
+        align-items: center;
+        padding: 10px;
+        margin-top: 10px;
+    }
+  }
+
+h3{
+    margin-bottom: 0;
+}
+
+.Des{
+    margin-top: 0;
+    margin-bottom: 10px; 
+}
+
+.precio{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.estrellaLlena{
+    color: darkorange;
+}
+.estrellaNoLlena{
+    color: darkorange;
+}
+
+.estrellaLlenaVerde{
+    color: greenyellow;
+}
+.estrellaNoLlenaVerde{
+    color: greenyellow;
+}
+
+.estrellaLlenaRoja{
+    color: red;
+}
+.estrellaNoLlenaRoja{
+    color: red;
+}
+
+
+.estrellasModal{
+    text-align: center !important;
+    color: black;
+}
+
+.imgUser{
+    text-align: center;
+}
+.imgUser2{
+    border-radius: 50%;
+}
+
+.botonAgregarApp{
+    align-content:  center !important;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
