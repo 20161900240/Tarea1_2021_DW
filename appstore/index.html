@@ -41,11 +41,16 @@
             </div>
            
 
-
+           
             <div class="row botonAgregarApp">
                 <hr>
+                 <!-- Button para agregar apps-->
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#agregarApp">Agregar Una App</button>
+                <!-- Button para eliminar apps-->
+                <button  type="button" class="btn btn-danger eliminarApp" data-toggle="modal" data-target="#EliminarApp">Eliminar Una App</button>
             </div>
+            
+
             
            
             <!-- Modal De Agregar Apps-->
@@ -56,37 +61,61 @@
                         <h1><b>Ingresando una nueva APP</b></h1>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="FormApp">
                             <div class="form-group">
                               <label for="formGroupExampleInput">Nombre de la App</label>
-                              <input type="text" class="form-control" id="NombreApp" placeholder="Ej. App X">
+                              <input required type="text" class="form-control" id="NombreApp" placeholder="Ej. App X">
                             </div>
                             <div class="form-group">
                               <label for="formGroupExampleInput2">Nombre del Desarrollador</label>
-                              <input type="text" class="form-control" id="NombreDes" placeholder="Ej. Ada Gicela Márquez">
+                              <input required type="text" class="form-control" id="NombreDes" placeholder="Ej. Ada Gicela Márquez">
                             </div>
                             <div class="form-group">
                               <label for="formGroupExampleInput2">Descripion de la App</label>
-                              <input type="text" class="form-control" id="Descripcion" placeholder="Ej. Esta es una app que trata sobre ...">
+                              <input required type="text" class="form-control" id="Descripcion" placeholder="Ej. Esta es una app que trata sobre ...">
                             </div>
 
                             <div class="form-group">
                                 <label for="formGroupExampleInput2">Categoria</label>
-                                <select class="form-control" id="Categoria">
-                                    <option value="categoria0">Categoria 0</option>
-                                    <option value="categoria1">Categoria 1</option>
-                                    <option value="categoria2">Categoria 2</option>
-                                    <option value="categoria3">Categoria 3</option>
-                                    <option value="categoria4">Categoria 4</option>
+                                <select required class="form-control" id="selectCategoria">
+                                    
                                 </select>
                               </div>
                         </form>  
                     </div> 
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-success">Guardar App</button>
+                    <button type="button" onclick="guardarInfo()" class="btn btn-success">Guardar App</button>
                     </div>
                 </div>
+                </div>
+            </div>
+
+            <!-- Modal De Eliminar Apps-->
+            <div class="modal fade" id="EliminarApp" tabindex="-1" role="dialog" aria-labelledby="EliminarApp" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1><b>Eliminando APP</b></h1>
+                        </div>
+                        <div class="modal-body">
+                            <form id="eliAppForm">
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput2">Categoria</label>
+                                    <select required class="form-control" id="nombreCategoria" onchange="llenarCategorias()">
+                                        <option disabled >Selecione Categoría</option>
+                                    </select>
+                                    <hr>
+                                    <label for="formGroupExampleInput2">Nombre de la App</label>
+                                    <select required class="form-control" id="nombresApps">    
+                                </div>
+                            </form>  
+                        </div> 
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" onclick="eliminarApp()" class="btn btn-success">Eliminar App</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
